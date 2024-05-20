@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/
+Disallow: /secret-page.html
+Disallow: /temp/
+
+Sitemap: https://to-do-webapp.vercel.app//sitemap.xml

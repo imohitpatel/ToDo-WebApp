@@ -1,0 +1,240 @@
+/* Styles reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Encode Sans SC', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(28, 28, 28);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Rampart One", sans-serif;
+    text-align: center;
+    color: darkgoldenrod;
+    /* Text color  */
+    padding: 12px 0;
+    margin: 0;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #033E47;
+    /* Outline in the font (2px, dark color)  */
+    color: 50%;
+    /* Make the text transparent so that the outline is visible  */
+}
+
+/* Styling of the form container  */
+#task-form {
+    text-align: center;
+    margin: 12px auto;
+    max-width: 70vw;
+    /* Define the maximum width of the form container */
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 2em;
+    border-radius: 10px;
+    /* Rounded edge  */
+    box-shadow: 0 0 10px darkgoldenrod;
+    /* Shadow */
+    align-items: center;
+}
+
+#task-form p {
+    font-family: "Sacramento", cursive;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: goldenrod;
+}
+
+/* Styling of the form fields  */
+#new-task {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #FCC003;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 4px goldenrod;
+    /* Shadow */
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: darkgoldenrod;
+    border: 2px solid darkgoldenrod;
+    padding: 8px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30%;
+    /* Fixed width  */
+    height: 3em;
+    /* Fixed height */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin: 8px 15px;
+    display: inline;
+    flex-direction: row;
+
+
+}
+
+button:hover {
+  font-size: 15px;
+  color: green;
+  background-color: silver;
+}
+
+.instructions li{
+  list-style-type: none;
+  font-size: 10px;
+  font-style: italic;
+  padding-left: 19px;
+  text-align: left;
+  color: #FAFAFA66;
+}
+.green{
+  color:#156701;
+}
+.red{
+  color: #670101;
+}
+
+#task-list {
+    font-family: "Architects Daughter", cursive;
+    list-style-type: none;
+    padding: 20px 0;
+    /* I adjusted to vertically center  */
+    max-width: 90vw;
+    /* I adjusted to occupy 60% width of the screen  */
+    margin: 0 auto;
+    /* Center horizontally  */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows line break as needed  */
+    justify-content: center;
+    /* Center the items horizontally  */
+    text-align: center;
+    align-items: center;
+}
+
+#task-list li {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    padding: 20px;
+    /* I reduced the padding to avoid distortion  */
+    margin: 0.5em;
+    border: 1px solid darkgoldenrod;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 300;
+    box-shadow: 0 0 5px goldenrod;
+    color: #FC0303;
+    text-transform: uppercase;
+    /* Shadow */
+    width: 20vw;
+    /* Define the desired width  */
+    text-align: center;
+    /* Center the text  */
+    display: flex;
+    /* Add flexible layout to the list item  */
+    flex-direction: column;
+    /* Align the items vertically  */
+    height: 130px;
+    /* Fixed height for the cards  */
+    position: relative;
+    /* Add relative position for the use of absolute position in the button  */
+}
+
+/* Styling of the "X" button on tasks  */
+#task-list li .delete-button {
+    font-family: "Rowdies", sans-serif;
+    background-color: #D00000;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 10px;
+    cursor: pointer;
+    display: none;
+    /* Initially hidden */ 
+    max-width: 80%;
+    max-height: 3em;
+    z-index: 999;
+    position: absolute;
+    /* Remove from the normal flow of the document */ 
+    bottom: 5%;
+    /* Align the button to the bottom of the card */ 
+    left: 50%;
+    /* Center horizontally */ 
+    transform: translateX(-50%);
+    /* Center horizontally */ 
+    margin-left: 0;
+    text-align: center;
+}
+
+#task-list li:hover .delete-button {
+    display: block;
+    /* Show on mouseover the task */ 
+}
+
+#task-list li.completed {
+    color: white;
+    background-color: green;
+    font-weight: 700;
+    transform: scale(0.6);
+    color: rgba(5, 5, 5, 0.5);
+}
+
+#task-list li:hover {
+    background-color: #000000;
+    color: white;
+    
+}
+
+#task-list li.completed:hover {
+    color: rgba(5, 5, 5, 0.5);
+    transform: scale(0.9);
+}
+
+.task-text {
+    margin-bottom: 2em;
+    /* Adds space between the arrow and the text */ 
+    font-size: 80%;
+
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 600px) {
+    #task-form {
+        max-width: 80vw;
+    }
+    #new-task {
+        max-width: 100vw;
+    }
+    button {
+        width: 80%;
+    }
+    #task-list li {
+        width: 35%;
+        height: 20vh;
+        font-size: 1em;
+        gap: 3%;
+    }
+    #task-list li.completed {
+        color: white;
+        background-color: green;
+        font-weight: 900;
+        transform: scale(0.8);
+    }
+    #task-form p {
+        font-size: 1em;
+        font-weight: 500;
+    }
+}

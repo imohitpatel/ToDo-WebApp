@@ -1,0 +1,32 @@
+{
+  "name": "to-do-webapp",
+  "version": "1.0.2",
+  "description": "TO DO WebApp is a versatile checklist generator designed to enhance your task management experience. Featuring a user-friendly interface, this web-based tool empowers users to effortlessly create, organize, and monitor their tasks.",
+  "main": "main.js",
+  "keywords": [
+    "JQuery",
+    "Task Management",
+    "To-Do List",
+    "Checklist",
+    "Task Manager",
+    "UX",
+    "Plugin",
+    "UI",
+    "to do interface",
+    "to do"
+  ],
+  "author": "Mohit",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "homepage": "https://to-do-webapp.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imohitpatel/to-do-webapp"
+  },
+  "bugs": {
+    "url": "https://github.com/imohitpatel/to-do-webapp/issues"
+  },
+  "PR": "https://github.com/imohitpatel/to-do-webapp/pulls"
+}
