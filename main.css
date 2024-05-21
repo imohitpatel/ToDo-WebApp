@@ -136,7 +136,7 @@ button:hover {
     font-size: 22px;
     font-weight: 300;
     box-shadow: 0 0 5px goldenrod;
-    color: #FFFFFF;
+    color: white;
     text-transform: uppercase;
     /* Shadow */
     width: 20vw;
